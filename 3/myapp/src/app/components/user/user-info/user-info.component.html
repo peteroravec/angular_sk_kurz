@@ -1,0 +1,31 @@
+<div class="userbox" [ngClass]="user.gender">
+
+  <div class="row">
+    <div class="col-md-5">
+
+      <div *ngIf="!user.picture">No image...</div>
+
+      <img [attr.title]="user.first_name" *ngIf="user.picture" src="{{user.picture}}" alt="" class="img-fluid" />
+
+    </div>
+    <div class="col-md-5">
+
+      <h2 class="name">{{user.first_name}} {{user.last_name}}</h2>
+
+      <p>{{user.address}}</p>
+
+      <a *ngIf="user.email" class="btn btn-primary" href="mailto: {{user.email}}">{{user.email}}</a>
+
+      <br />
+      Gender: <strong>{{user.gender | uppercase}}</strong><br />
+      Birthday: {{user.birthday | date: 'dd.MM.yyyy'}}
+
+    </div>
+    <div class="col-md-2">
+      <button (click)="deleteUser(user.id)" class="btn btn-danger btn-block btn-lg">
+        X
+      </button>
+    </div>
+  </div>
+
+</div>

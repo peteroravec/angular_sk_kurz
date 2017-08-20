@@ -1,0 +1,20 @@
+<div class="user-list">
+
+  <h1>USER LIST</h1>
+
+  <div *ngFor="let user of userData">
+
+    <user-info (onUserDelete)="deleteUserFromJSON($event)" [user]="user" ></user-info>
+
+  </div>
+
+  <button (click)="addNewUser()" class="btn btn-lg btn-primary">
+    Add new user
+  </button>
+
+  <br />
+  <pre>
+    {{userData | json}}
+  </pre>
+
+</div>

@@ -1,0 +1,26 @@
+
+.userbox {
+  background: #e4e4e4;
+  margin: 20px 0;
+  padding: 10px;
+}
+
+.userbox.Male {
+  background: lightblue;
+}
+
+.userbox.Female {
+  background: #ffe4e8;
+}
+
+.userbox .name {
+  color: black;
+  font-size: 40px;
+}
+
+.userbox img {
+  border: 3px solid #444;
+  width: 100%;
+  height: auto;
+  max-width: auto;
+}
