@@ -1,0 +1,24 @@
+<div class="container">
+
+  <h1>Two Way Data Binding</h1>
+
+  <input [value]="username" (input)="username = $event.target.value" style="font-size: 50px;" value="" />
+
+  <br />
+  <br />
+  ngModel directive
+  <input [(ngModel)]="username" style="font-size: 50px;" value="" />
+
+  <h1>Hello {{username}}!</h1>
+
+</div>
+
+<div class="container">
+
+  <h1>Custom Two Way Data Binding</h1>
+
+  <mycounter [(counter)]="random_number"></mycounter>
+
+  <h1>{{random_number}}</h1>
+
+</div>
