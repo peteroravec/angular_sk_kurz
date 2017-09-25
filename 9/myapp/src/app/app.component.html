@@ -1,0 +1,14 @@
+<h1>Attribute Directive</h1>
+
+<p>Text - no directive</p>
+<p Highlight fontSize="50">Text - with Highlight directive</p>
+
+
+<h1>Structural directive</h1>
+
+<p>This text is always visible</p>
+<p *OnlyAdmin Highlight>This text is visible only for admins</p>
+
+<ng-template OnlyAdmin>
+  <p Highlight>This text is visible only for admins</p>
+</ng-template>
