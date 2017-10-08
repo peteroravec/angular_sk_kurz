@@ -9,6 +9,9 @@ import { OrangeComponent } from './components/orange/orange.component';
 import { BlueComponent } from './components/blue/blue.component';
 import { RedComponent } from './components/red/red.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { AccessDeniedComponent } from './components/access-denied/access-denied.component';
+
+import { LoggedInGuard } from './guards/logged-in.guard';
 
 @NgModule({
   declarations: [
@@ -18,13 +21,14 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     OrangeComponent,
     BlueComponent,
     RedComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    AccessDeniedComponent
   ],
   imports: [
     BrowserModule,
     appRouterModule
   ],
-  providers: [],
+  providers: [ LoggedInGuard ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
