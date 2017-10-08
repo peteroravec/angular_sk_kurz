@@ -1,0 +1,9 @@
+button {
+  font-size: 20px;
+  background: silver;
+}
+
+.active {
+  background: black;
+  color: white;
+}

@@ -1,0 +1,20 @@
+<h1>Router</h1>
+
+<button routerLinkActive="active" routerLink="home">Homepage</button>
+<button routerLinkActive="active" routerLink="simple-routing/red">Red</button>
+<button routerLinkActive="active" routerLink="simple-routing/pink">Pink</button>
+<button routerLinkActive="active" routerLink="simple-routing/orange">Orange</button>
+<button routerLinkActive="active" routerLink="simple-routing/blue">Blue</button>
+
+<br/>
+<br/>
+<br/>
+
+
+<router-outlet></router-outlet>
+
+<br />
+<br />
+
+<button (click)="navigateMeTo('/home')">Navigate me to HOME</button>
+<button (click)="navigateMeTo('/simple-routing/blue')">Navigate me to BLUE</button>
