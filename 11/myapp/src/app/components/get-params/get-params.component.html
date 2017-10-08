@@ -1,0 +1,12 @@
+<div class="container">
+  <h1>GET PARAMS</h1>
+
+  <pre>
+  {{myParams | json}}
+  </pre>
+
+  <button [routerLink]="['/get-params/555']">Open ID: 555</button>
+  <button [routerLink]="['/get-params/345678']">Open ID: 345678</button>
+  <button [routerLink]="['/get-params', '12345', 'Peter']">Open ID: 12345 + name: Peter</button>
+
+</div>

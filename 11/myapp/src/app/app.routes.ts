@@ -9,6 +9,8 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { AccessDeniedComponent } from './components/access-denied/access-denied.component';
 import { MultipleOutletsComponent } from './components/multiple-outlets/multiple-outlets.component';
 
+import { GetParamsComponent } from './components/get-params/get-params.component';
+
 import { LoggedInGuard } from './guards/logged-in.guard';
 
 const routes: Routes = [
@@ -28,6 +30,10 @@ const routes: Routes = [
     { path: 'orange', component: OrangeComponent, outlet: 'outlet-left'},
     { path: 'orange', component: OrangeComponent, outlet: 'outlet-right'},
   ]},
+
+  { path: 'get-params/:id/:name', component: GetParamsComponent },
+  { path: 'get-params/:id', component: GetParamsComponent },
+  { path: 'get-params', component: GetParamsComponent },
 
   { path: '**', component: NotFoundComponent }
 ];
