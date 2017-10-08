@@ -9,4 +9,13 @@
   <button [routerLink]="['/get-params/345678']">Open ID: 345678</button>
   <button [routerLink]="['/get-params', '12345', 'Peter']">Open ID: 12345 + name: Peter</button>
 
+  <h1>GET QUERY PARAMS</h1>
+
+  <pre>
+  {{myQueryParams | json}}
+  </pre>
+
+  <button [routerLink]="['/get-params']" [queryParams]="{param1: '1235', param2: 'angular.sk'}">Set query params</button>
+
+
 </div>

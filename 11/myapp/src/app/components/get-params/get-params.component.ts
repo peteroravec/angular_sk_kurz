@@ -9,6 +9,7 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 export class GetParamsComponent implements OnInit {
 
   myParams: Object;
+  myQueryParams: Object;
 
   constructor(private activatedRoute: ActivatedRoute) { }
 
@@ -18,6 +19,11 @@ export class GetParamsComponent implements OnInit {
     this.activatedRoute.params.subscribe((params: Params) => {
       console.log(params);
       this.myParams = params;
+    });
+
+    this.activatedRoute.queryParams.subscribe((params: Params) => {
+      console.log(params);
+      this.myQueryParams = params;
     });
 
   }
