@@ -1,0 +1,13 @@
+.col-left {
+  float: left;
+  width: 40%;
+  padding: 10px;
+  border: 5px solid red;
+}
+
+.col-right {
+  float: left;
+  width: 40%;
+  padding: 10px;
+  border: 5px solid green;
+}

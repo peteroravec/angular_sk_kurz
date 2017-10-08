@@ -1,0 +1,22 @@
+<h1>Multiple Router Outlets</h1>
+
+<div style="display: inline-block; width: 100%;">
+  <div class="col-left">
+    <router-outlet name="outlet-left"></router-outlet>
+  </div>
+  <div class="col-right">
+    <router-outlet name="outlet-right"></router-outlet>
+  </div>
+</div>
+
+<br />
+<br />
+<br />
+
+<button [routerLink]="[{outlets: {'outlet-left': ['blue']}}]">load BLUE LEFT</button>
+<button [routerLink]="[{outlets: {'outlet-right': ['blue']}}]">load BLUE RIGHT</button>
+<button [routerLink]="[{outlets: {'outlet-left': ['orange']}}]">load ORANGE LEFT</button>
+<button [routerLink]="[{outlets: {'outlet-right': ['orange']}}]">load ORANGE RIGHT</button>
+
+<button [routerLink]="[{outlets: {'outlet-right': ['orange'], 'outlet-left': ['orange']}}]">Only ORANGE</button>
+<button [routerLink]="[{outlets: {'outlet-right': ['blue'], 'outlet-left': ['blue']}}]">Only BLUE</button>

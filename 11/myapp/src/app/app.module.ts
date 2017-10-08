@@ -12,6 +12,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { AccessDeniedComponent } from './components/access-denied/access-denied.component';
 
 import { LoggedInGuard } from './guards/logged-in.guard';
+import { MultipleOutletsComponent } from './components/multiple-outlets/multiple-outlets.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { LoggedInGuard } from './guards/logged-in.guard';
     BlueComponent,
     RedComponent,
     NotFoundComponent,
-    AccessDeniedComponent
+    AccessDeniedComponent,
+    MultipleOutletsComponent
   ],
   imports: [
     BrowserModule,
