@@ -1,0 +1,11 @@
+.edit {
+  margin: 20px;
+  background: #eee;
+  padding: 40px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 5px;
+}

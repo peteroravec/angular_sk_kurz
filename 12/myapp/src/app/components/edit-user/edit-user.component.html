@@ -1,0 +1,39 @@
+<div class="edit">
+  <button (click)="goBack()" class="btn btn-primary btn-sm">BACK</button><br /><br />
+  <h1>Edit user {{editUserID}}</h1>
+
+  <div *ngIf="userData" class="row">
+    <div class="col-md-4 col-sm-4">
+      <img src="{{userData.picture}}" alt="" class="img-fluid" />
+    </div>
+    <div class="col-md-8 col-sm-8">
+      <input [(ngModel)]="userData.first_name" />
+      <input [(ngModel)]="userData.last_name" />
+
+      <br />
+      <br />
+      Company:<br /><input [(ngModel)]="userData.company" /><br />
+
+      <br />
+      Website:<br /><input [(ngModel)]="userData.website" /><br />
+      Email:<br /><input [(ngModel)]="userData.email" /><br />
+      <br />
+
+      <textarea [(ngModel)]="userData.bio"></textarea>
+
+
+      <div class="row">
+        <div class="col-md-6 col-sm-6 col-xs-6">
+
+          <strong *ngIf="saved">Saved!</strong>
+
+        </div>
+        <div class="col-md-6 col-sm-6 col-xs-6">
+          <button (click)="saveData(userData)" class="btn btn-lg btn-block btn-success">UPDATE</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>

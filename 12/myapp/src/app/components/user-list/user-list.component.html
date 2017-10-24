@@ -1,0 +1,17 @@
+<div class="text-center">
+  <h2>UserList Component</h2>
+  <h1>Page: {{currentPage}}</h1>
+
+  <div class="row" style="padding: 10px;">
+    <div class="col-6">
+      <button [disabled]="currentPage <= 1" [routerLink]="['/page', currentPage - 1]" class="btn btn-lg btn-block btn-primary">&lt; Previous</button>
+    </div>
+    <div class="col-6">
+      <button [routerLink]="['/page', currentPage + 1]" class="btn btn-block btn-lg btn-primary">Next &gt;</button>
+    </div>
+  </div>
+</div>
+
+<div *ngFor="let userItem of allUserData">
+  <app-user-item (deletedUser)="reloadCurrentPage()" [userData]="userItem"></app-user-item>
+</div>

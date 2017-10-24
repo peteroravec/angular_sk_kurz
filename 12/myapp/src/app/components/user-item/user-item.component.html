@@ -1,0 +1,26 @@
+<div class="user-item">
+
+  <div class="row">
+    <div class="col-md-4 col-sm-4">
+      <img src="{{userData.picture}}" alt="" class="img-fluid" />
+    </div>
+    <div class="col-md-8 col-sm-8">
+      <h2>{{userData.first_name}} {{userData.last_name}} [id: {{userData.id}}]</h2>
+      <h5>{{userData.company}}</h5>
+      <a href="{{userData.website}}">{{userData.website}}</a><br />
+      <a href="mailto:{{userData.email}}">{{userData.email}}</a>
+      <p>{{userData.bio}}</p><br />
+
+      <div class="row">
+        <div class="col-md-6 col-sm-6 col-xs-6">
+          <button [routerLink]="['/edit', userData.id]" class="btn btn-block btn-primary">EDIT</button>
+        </div>
+        <div class="col-md-6 col-sm-6 col-xs-6">
+          <button (click)="deleteUser(userData.id)" class="btn btn-block btn-danger">DELETE</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
