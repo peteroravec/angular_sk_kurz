@@ -1,0 +1,92 @@
+<h1>Pipes</h1>
+
+<h2>Uppercase</h2>
+{{myText}}<br />
+{{myText | uppercase}}<br />
+
+<h2>Lowercase</h2>
+
+{{myText}}<br />
+{{myText | lowercase}}<br />
+
+<h2>Date</h2>
+
+{{myDate}}<br />
+{{myDate | date:'dd/MM/yyyy'}}<br />
+{{myDate | date:'dd.MM.yyyy'}}<br />
+{{myDate | date:'medium'}}<br />
+{{myDate | date:'short'}}<br />
+{{myDate | date:'fullDate'}}<br />
+{{myDate | date:'mediumDate'}}<br />
+{{myDate | date:'shortDate'}}<br />
+{{myDate | date:'mediumTime'}}<br />
+{{myDate | date:'shortTime'}}<br />
+
+<h2>JSON</h2>
+
+<pre>{{myJSON | json}}</pre>
+
+<h2>Slice</h2>
+{{myText}}<br />
+{{myText | slice:0:11}}<br />
+{{myText | slice:13:35}}
+
+<h2>Number</h2>
+{{myNumber}}<br />
+{{myNumber | number:'1.1-5'}}<br />
+{{myNumber2 | number:'1.1-5'}}<br />
+{{myNumber2 | number:'1.1-2'}}<br />
+{{myNumber2 | number:'5.1-8'}}<br />
+
+<h2>Percent</h2>
+{{myNumber3}}<br />
+{{myNumber3 | percent:'1.0-0'}}<br />
+{{myNumber3 | percent:'1.0-2'}}<br />
+{{myNumber3 | percent:'5.1-5'}}<br />
+
+<h2>Currency</h2>
+{{myNumber2}}<br />
+{{myNumber2 | currency}}<br />
+{{myNumber2 | currency:'USD'}}<br />
+{{myNumber2 | currency:'USD':false}}<br />
+{{myNumber2 | currency:'EUR'}}<br />
+{{myNumber2 | currency:'EUR':false}}<br />
+{{myNumber2 | currency:'EUR':false:'1.1-6'}}<br />
+
+<h2>AsyncPipe</h2>
+{{observableTime | async}}
+
+<h2>Custom Useless Pipe</h2>
+{{myText}}<br />
+{{myText | useless:'START':'END'}}<br />
+
+<h2>Custom Filter Pipe</h2>
+
+<div *ngFor="let person of myFilterData">
+  {{person.name}} - {{person.canFly}}<br />
+</div>
+
+<br />
+<br />
+
+<div *ngFor="let person of myFilterData | customFilter:false">
+  {{person.name}} - {{person.canFly}}<br />
+</div>
+
+<br />
+<br />
+
+<div *ngFor="let person of myFilterData | customFilter:true">
+  {{person.name}} - {{person.canFly}}<br />
+</div>
+
+<h2>Pipe from Component</h2>
+{{pipeFromComponent}}
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
