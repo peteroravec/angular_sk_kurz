@@ -1,0 +1,21 @@
+<h1>Template driven forms</h1>
+
+<form #myForm="ngForm" (ngSubmit)="submitForm(myForm.value)">
+
+  <h1 *ngIf="!myForm.valid" style="color: red; font-size: 40px;">Form is not valid</h1>
+  <h1 *ngIf="myForm.valid" style="color: green; font-size: 40px;">Form is valid</h1>
+
+  Name: <br /><input placeholder="Type name..." #myName type="text" [(ngModel)]="name" name="name"><br />
+  Surname: <br /><input #mySurname type="text" pattern="[a-zA-Z]{5}" required [(ngModel)]="surname" name="surname" />
+
+  <br /><br />Occupation: <br />
+  <select #mySelectbox [(ngModel)]="selectedOccupation" name="selectedOccupation">
+    <option value="">---</option>
+    <option *ngFor="let item of occupation" [value]="item.title">
+      {{item.title}}
+    </option>
+  </select>
+
+  <button *ngIf="myForm.valid" type="submit">Submit form</button>
+
+</form>
